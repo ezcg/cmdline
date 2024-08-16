@@ -1,5 +1,13 @@
 alias ll='ls -ltra'
 
+#LS_COLORS=$LS_COLORS:'di=0;35:' ; export LS_COLORS
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\]\u\[\033[01;30m\]@\[\033[01;32m\]\h\[\033[00m\]    :\[\033[01;34m\]\w\[\033[00m\]\$ '
+
+
 if [[ $- == *i* ]]; then
     green=$(tput bold)$(tput setaf 6)
     red=$(tput bold)$(tput setaf 1)
