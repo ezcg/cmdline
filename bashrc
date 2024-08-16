@@ -1,3 +1,5 @@
+alias ll='ls -ltra'
+
 if [[ $- == *i* ]]; then
     green=$(tput bold)$(tput setaf 6)
     red=$(tput bold)$(tput setaf 1)
